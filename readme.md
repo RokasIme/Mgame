@@ -2,6 +2,11 @@
 
 _fun math game counter_
 
+The game have a target number from 0 to 100. You must calculate the target number using the numbers from 0 to 9, but one number you can use only once per game. After one number, you must put the operator +, -, \*.
+You have 30 seconds to solve the task. If you do it within 15 sec. you will get 2 points, if within 30s. - 1 point. More than 30 m. time is up and you are not awarded.
+After one round you have few seconds to relax, and then next round.
+Good luck :)
+
 <br>
 
 ## 🌟 About
