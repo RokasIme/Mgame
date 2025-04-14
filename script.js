@@ -78,9 +78,12 @@ function finishRound(timeup = false) {
     if (randomNumber === currentValue) {
       score += doubleScore ? 2 : 1;
       scoreEl.textContent = score;
+      submitButtonEl.disabled = true;
       messageEl.textContent =
         "Correct! you scored " + (doubleScore ? 2 : 1) + "points!";
     } else {
+      numberButtonsEl.disabled = true;
+      submitButtonEl.disabled = true;
       messageEl.textContent = "Incorrect! No points awarded.";
     }
   }
@@ -99,9 +102,11 @@ function resetGame() {
     let countdownInterval = setInterval(() => {
       messageEl.innerHTML = `New game starting in ${countdown} seconds...`;
       countdown--;
+      submitButtonEl.disabled = true;
       if (countdown < 0) {
         clearInterval(countdownInterval);
         messageEl.innerHTML = "";
+        submitButtonEl.disabled = false;
         playRound();
       }
     }, 1000);
